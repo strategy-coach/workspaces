@@ -56,7 +56,7 @@ TODO: Add notes
 
 TODO: Add notes
 
-### Governed VS Code `.code-workspace` files (optional)
+## Governed VS Code `.code-workspace` files (optional)
 
 `mGit` tasks use VS Code `*.code-workspace` files whose folders assume that the `*.code-workspace` file is in the current directory root. This allows Visual Studio Code users to set their folders for all Git managers relative to the current directory as the root. 
 
