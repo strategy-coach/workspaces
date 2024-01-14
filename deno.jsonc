@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "doctor": "deno run -A doctor.ts",
+    "update-deps": "deno run --allow-read=. --allow-write=. --allow-net https://deno.land/x/udd/main.ts mgit.ts doctor.ts"
+  }
+}
