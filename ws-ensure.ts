@@ -9,7 +9,7 @@ import {
 
 /**
  * Declarative (idempotent) managed Git (mGit) repo maintenance. When you want to work on a Git repo
- * in your workspace, add it to `const wsRepos` below and then run these commands:
+ * in your workspace, add it to `const wsRepos` below and then run:
  *
  *   cd $HOME/workspaces         # or whereever you store your repos
  *   deno run -A ./ws-ensure.ts  # run this script
@@ -19,13 +19,18 @@ import {
 
 const wsContext = workspaceContext();
 
-/* add your managed Git (GitHub, GitLab, BitBucket, etc.) repos here*/
-const wsRepos = [{
-  repoUrlWithoutScheme: "github.com/netspective-labs/sql-aide",
+/* add all your managed Git (GitHub, GitLab, BitBucket, etc.) repos here*/
+const wsRepos: { readonly repoUrlWithoutScheme: string }[] = [{
+  repoUrlWithoutScheme: "github.com/strategy-coach/workspaces",
 }, {
   repoUrlWithoutScheme: "github.com/opsfolio/resource-surveillance",
+}, {
+  repoUrlWithoutScheme: "github.com/netspective-labs/sql-aide",
+}, {
+  repoUrlWithoutScheme: "github.com/qe-collaborative-services/1115-hub",
 }];
 
+// you should not need to modify any of the following, just configure wsRepos above
 for (const wsr of wsRepos) {
   await ensureRepo(await workspaceRepo(wsr.repoUrlWithoutScheme, wsContext), {
     ensureVscWsDepsFolders: true,
