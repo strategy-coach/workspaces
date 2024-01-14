@@ -2,8 +2,9 @@
 
 ## Quick start
 
-1. Use `ws-ensure.ts` in this repo and create a `ws-ensure.ts` file in the root of your workspaces.
-2. Execute `deno run -A ./ws-ensure.ts` to idempotently clone and update your workspace repositories.
+1. Use `ws-ensure.ts` in this repo and create a copy of it called `ws-ensure.ts` file in the root of your workspaces (e.g. `D:\workspaces` or `/home/snshah/workspaces` or any other root directory).
+2. Update `wsRepos` variable and fill out the `repoUrlWithoutScheme` properties for each repository you want to work with locally.
+3. Execute `deno run -A ./ws-ensure.ts` to idempotently clone and update your workspace repositories (run it as many times as necessary, every time you want to update and work with those repos locally).
 
 ## Governed directory structure
 

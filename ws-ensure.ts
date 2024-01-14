@@ -5,7 +5,7 @@ import {
   mGitStatus,
   workspaceContext,
   workspaceRepo,
-} from "./mgit.ts";
+} from "https://raw.githubusercontent.com/shah/workspaces/v1.0.0/mgit.ts";
 
 /**
  * Declarative (idempotent) managed Git (mGit) repo maintenance. When you want to work on a Git repo
