@@ -65,6 +65,8 @@ Use [Coach Workspaces Host](https://github.com/strategy-coach/workspaces-host) t
 mkdir -p ~/workspaces && cd ~/workspaces
 curl -fsSL "https://raw.githubusercontent.com/strategy-coach/workspaces/main/ws-ensure.ts" > ./ws-ensure.ts
 chmod +x ./ws-ensure.ts
+# edit the ./ws-ensure.ts file to supply the GitHub repos you care about and then:
+./ws-ensure
 ```
 
 ## MacOS Dev Infrastructure
