@@ -3,13 +3,6 @@
 ## Quick start
 
 1. Use `ws-ensure.ts` in this repo and create a copy of it called `ws-ensure.ts` file in the root of your workspaces (e.g. `D:\workspaces` or `/home/snshah/workspaces` or any other root directory).
-
-```bash
-mkdir -p ~/workspaces && cd ~/workspaces
-curl -fsSL "https://raw.githubusercontent.com/strategy-coach/workspaces/main/ws-ensure.ts" > ./ws-ensure.ts
-chmod +x ./ws-ensure.ts
-```
-
 2. Update `wsRepos` variable and fill out the `repoUrlWithoutScheme` properties for each repository you want to work with locally.
 3. Execute `deno run -A ./ws-ensure.ts` to idempotently clone and update your workspace repositories (run it as many times as necessary, every time you want to update and work with those repos locally).
 
@@ -49,6 +42,15 @@ to install our minimum dependencies, namely Git and Deno:
 $ winget install Git.Git deno
 ```
 
+Then you can grab `ws-ensure.ts` from this repo and run it:
+
+```psh
+$ cd c:\workspaces
+$ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/strategy-coach/workspaces/main/ws-ensure.ts" -OutFile "./ws-ensure.ts"
+# edit the ./ws-ensure.ts file to supply the GitHub repos you care about and then:
+$ deno run -A ./ws-ensure.ts
+```
+
 These are optional but are very helpful for Windows development:
 
 ```psh
@@ -57,7 +59,13 @@ $ winget install Microsoft.Powershell Microsoft.WindowsTerminal
 
 ## Linux Dev Infrastructure
 
-TODO: Add notes
+Use [Coach Workspaces Host](https://github.com/strategy-coach/workspaces-host) to prepare an opinionated Linux Engineering Sandbox and then:
+
+```bash
+mkdir -p ~/workspaces && cd ~/workspaces
+curl -fsSL "https://raw.githubusercontent.com/strategy-coach/workspaces/main/ws-ensure.ts" > ./ws-ensure.ts
+chmod +x ./ws-ensure.ts
+```
 
 ## MacOS Dev Infrastructure
 
