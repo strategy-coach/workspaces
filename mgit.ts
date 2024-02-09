@@ -1,16 +1,16 @@
-import * as c from "https://deno.land/std@0.212.0/fmt/colors.ts";
-import { walk } from "https://deno.land/std@0.212.0/fs/walk.ts";
-import * as path from "https://deno.land/std@0.212.0/path/mod.ts";
-import $ from "https://deno.land/x/dax@0.36.0/mod.ts";
-import * as JSONC from "https://deno.land/std@0.212.0/jsonc/mod.ts";
+import * as c from "https://deno.land/std@0.215.0/fmt/colors.ts";
+import { walk } from "https://deno.land/std@0.215.0/fs/walk.ts";
+import * as path from "https://deno.land/std@0.215.0/path/mod.ts";
+import $ from "https://deno.land/x/dax@0.39.0/mod.ts";
+import * as JSONC from "https://deno.land/std@0.215.0/jsonc/mod.ts";
 
 // these are typically used by consumers of this library so make them accessible
-export * as colors from "https://deno.land/std@0.212.0/fmt/colors.ts";
-export * as fs from "https://deno.land/std@0.212.0/fs/mod.ts";
-export * as JSONC from "https://deno.land/std@0.212.0/jsonc/mod.ts";
-export * as path from "https://deno.land/std@0.212.0/path/mod.ts";
-export * as dax from "https://deno.land/x/dax@0.36.0/mod.ts";
-export { $ } from "https://deno.land/x/dax@0.36.0/mod.ts";
+export * as colors from "https://deno.land/std@0.215.0/fmt/colors.ts";
+export * as fs from "https://deno.land/std@0.215.0/fs/mod.ts";
+export * as JSONC from "https://deno.land/std@0.215.0/jsonc/mod.ts";
+export * as path from "https://deno.land/std@0.215.0/path/mod.ts";
+export * as dax from "https://deno.land/x/dax@0.39.0/mod.ts";
+export { $ } from "https://deno.land/x/dax@0.39.0/mod.ts";
 
 /**
  * TODO: document all interfaces, fields, and functions so that VS Code editor

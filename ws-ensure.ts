@@ -5,7 +5,7 @@ import {
   mGitStatus,
   workspaceContext,
   workspaceRepo,
-} from "https://raw.githubusercontent.com/strategy-coach/workspaces/v1.0.0/mgit.ts";
+} from "https://raw.githubusercontent.com/strategy-coach/workspaces/v1.0.1/mgit.ts";
 
 /**
  * Declarative (idempotent) managed Git (mGit) repo maintenance. When you want to work on a Git repo
@@ -20,7 +20,10 @@ import {
 const wsContext = workspaceContext();
 
 /* add all your managed Git (GitHub, GitLab, BitBucket, etc.) repos here*/
-const wsRepos: { readonly repoUrlWithoutScheme: string }[] = [{
+const wsRepos: {
+  readonly repoUrlWithoutScheme: `github.com/${string}/${string}`;
+  readonly fresh?: boolean;
+}[] = [{
   repoUrlWithoutScheme: "github.com/strategy-coach/workspaces",
 }, {
   repoUrlWithoutScheme: "github.com/opsfolio/resource-surveillance",
@@ -33,6 +36,7 @@ const wsRepos: { readonly repoUrlWithoutScheme: string }[] = [{
 // you should not need to modify any of the following, just configure wsRepos above
 for (const wsr of wsRepos) {
   await ensureRepo(await workspaceRepo(wsr.repoUrlWithoutScheme, wsContext), {
+    force: wsr.fresh ? true : false,
     ensureVscWsDepsFolders: true,
     // by default we require *.mgit.code-workspace ("strict" matcher) but you can use
     // relaxedVsCodeWsPathMatchers() or your own matchers in case you want others.
