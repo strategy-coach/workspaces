@@ -66,7 +66,7 @@ mkdir -p ~/workspaces && cd ~/workspaces
 curl -fsSL "https://raw.githubusercontent.com/strategy-coach/workspaces/main/ws-ensure.ts" > ./ws-ensure.ts
 chmod +x ./ws-ensure.ts
 # edit the ./ws-ensure.ts file to supply the GitHub repos you care about and then:
-./ws-ensure
+./ws-ensure.ts
 ```
 
 ## MacOS Dev Infrastructure
